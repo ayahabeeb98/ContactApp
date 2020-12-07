@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+          integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Contact App</title>
+</head>
+<body>
+<header class="main-header">
+    <h1>Contact App</h1>
+    <button id="addBtn">+</button>
+</header>
+
+<main>
+    <div class="contact">
+        <div class="contact__list">
+            <div class="contact__search">
+                <label for="search" class="search__group">
+                    <input type="text" class="search__control" id="search" placeholder="Search"/>
+                    <button class="search__btn"><i class="fas fa-search"></i></button>
+                </label>
+            </div>
+            <div class="contact__item">
+                <img src="./images/no-user.png" alt="">
+                <div class="contact__info">
+                    <h3 class="contact_name">Aya Habeeb</h3>
+                    <p class="contact__bio">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact_details">
+            <span class="details__close">&larrhk;</span>
+            <img src="./images/no-user.png" alt="">
+            <div class="contact__info">
+                <h2 class="contact_name contact__name--main">Aya Habeeb</h2>
+                <div class="contact__phone">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div class="phone">
+                        <h4>Mobile</h4>
+                        <p>05900000000</p>
+                    </div>
+                </div>
+                <div class="contact__email">
+                    <i class="fas fa-envelope"></i>
+                    <div class="email">
+                        <h4>email</h4>
+                        <p>aya.r.h98@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact__bio contact__bio--custom">
+                    <i class="fas fa-info-circle"></i>
+                    <div class="bio">
+                        <h4>Notes</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit. Magnam, sunt!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--=== Add Contact Modal  ====-->
+    <div id="addContact" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <form class="form-container">
+                <input type="file" class="form-control">
+
+                <label for="name" class="form-group">
+                    <input type="text" class="form-control"
+                           placeholder=" Name" id="name" required>
+                </label>
+
+                <label for="email" class="form-group">
+                    <input type="email" class="form-control"
+                           placeholder=" Email" id="email" required>
+                </label>
+
+                <label for="phone" class="form-group">
+                    <input type="tel" class="form-control"
+                           placeholder=" Phone No." id="phone" required>
+                </label>
+
+                <label for="bio" class="form-group">
+                    <textarea class="form-control"
+                           placeholder=" Notes" id="bio" required></textarea>
+                </label>
+
+
+                <button type="submit" class="btn-add">Add Contact</button>
+
+            </form>
+        </div>
+    </div>
+</main>
+
+
+<script src="./js/main.js"></script>
+</body>
+</html>
