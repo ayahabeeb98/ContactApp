@@ -217,6 +217,9 @@ button {
     position: relative;
 }
 
+.details__wrapper {
+    text-align: center;
+}
 .details__close {
     position: absolute;
     left: 1rem;
@@ -227,6 +230,7 @@ button {
 
 .contact_details img {
     width: 280px;
+    height: 280px;
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 1rem;
@@ -258,6 +262,7 @@ button {
     padding: 1rem;
     display: flex;
     align-items: center;
+    text-align: left;
 }
 
 
@@ -278,7 +283,7 @@ button {
 
 
 .modal {
-    /*display: none;*/
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -388,6 +393,15 @@ button {
     color: #4b4b4b;
 }
 
+
+.no_user {
+    background: #4b4b4b;
+    color: #FFFFFF;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    display: none;
+}
 
 @media (max-width: 868px) {
     .contact {

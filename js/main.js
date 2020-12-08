@@ -89,7 +89,7 @@ createContactBtn.addEventListener('click',(e)=>{
     const phone = contactPhone.value;
     const bio = contactBio.value;
     const key = k;
-    contact.push({name,email,phone,bio,key});
+    contact.push({name,email,phone,bio,key,newSrc});
     wrapper.appendChild(createNewContact(newSrc,name,bio,key));
     addContactModal.style.display = "none";
     k+=1;
@@ -110,5 +110,36 @@ function clearFields() {
 wrapper.addEventListener('click',e=>{
     let singleContact = e.target;
     let contactKey = singleContact.dataset.key;
-    console.log(contactKey);
+    if (contactKey) {
+        let user = contact.filter(item => item.key === Number(contactKey));
+        showDetails(user[0])
+    }else {
+        console.log('something went wrong')
+    }
+});
+
+const userImage = document.querySelector('.contact_details img');
+const userName = document.querySelector('.contact__name--main');
+const userPhone = document.querySelector('.phone p');
+const userEmail = document.querySelector('.email p');
+const userBio = document.querySelector('.bio p');
+const closeContact = document.querySelector('.details__close');
+const detailsWrapper = document.querySelector('.details__wrapper');
+const no_user = document.querySelector('.no_user');
+
+function showDetails(user) {
+    no_user.style.display = "none";
+    detailsWrapper.style.display = "block";
+    userImage.src = user.newSrc;
+    userName.textContent = user.name;
+    userPhone.textContent = user.phone;
+    userEmail.textContent = user.email;
+    userBio.textContent = user.bio;
+}
+
+
+closeContact.addEventListener('click',()=>{
+    detailsWrapper.style.display = "none";
+    no_user.style.display = "block";
+    userImage.src = noUserThump;
 });
