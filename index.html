@@ -26,11 +26,13 @@
                     <button class="search__btn"><i class="fas fa-search"></i></button>
                 </label>
             </div>
-            <div class="contact__item">
-                <img src="./images/no-user.png" alt="">
-                <div class="contact__info">
-                    <h3 class="contact_name">Aya Habeeb</h3>
-                    <p class="contact__bio">Lorem ipsum dolor sit.</p>
+            <div class="wrapper">
+                <div class="contact__item">
+                    <img src="./images/no-user.png" alt="">
+                    <div class="contact__info">
+                        <h3 class="contact_name">Aya Habeeb</h3>
+                        <p class="contact__bio">Lorem ipsum dolor sit.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,8 +75,12 @@
         <div class="modal-content">
             <span class="close">&times;</span>
 
-            <form class="form-container">
-                <input type="file" class="form-control">
+            <form class="form-container" enctype="multipart/form-data">
+                <input type="file" accept="image/*" id="avatar" class="form-control form-file">
+                <label for="avatar" class="form--avatar">
+                    <i class="fas fa-camera camera_icon"></i>
+                    <img src="./images/no-user.png" class="avatar__thump" alt="">
+                </label>
 
                 <label for="name" class="form-group">
                     <input type="text" class="form-control"
