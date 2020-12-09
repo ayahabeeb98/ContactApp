@@ -108,6 +108,7 @@ function clearFields() {
     contactEmail.value = '';
     contactBio.value = '';
     thump.src = noUserThump;
+    newSrc = noUserThump;
 }
 
 
