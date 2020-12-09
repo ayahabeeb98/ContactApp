@@ -1,11 +1,11 @@
 
-##Live Demo
+## Live Demo
 <a href="https://ayahabeeb98.github.io/ContactApp/"> click here </a>
 
-##Design preview
+## Design preview
 ![Design preview for the contact App](./contactPreview.png)
 
-##Features:
+## Features:
 <ul>
     <li> Add a new contact </li>
     <li> Display contact details </li>
