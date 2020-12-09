@@ -403,6 +403,13 @@ button {
     display: none;
 }
 
+
+footer p {
+    color: #70726f;
+    text-align: center;
+    font-size: .875rem;
+    margin: 2rem 0;
+}
 @media (max-width: 868px) {
     .contact {
         grid-template-columns: 1fr;
@@ -410,11 +417,21 @@ button {
 }
 
 @media (max-width: 556px) {
-    .contact_details img {
+    .contact_details img,
+    .avatar__thump{
         width: 180px;
+        height: 180px;
     }
 
     .main-header h1 {
         font-size: 1.5rem;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .form-container {
+        width: 85%;
     }
 }

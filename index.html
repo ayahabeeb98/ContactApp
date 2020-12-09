@@ -21,13 +21,15 @@
     <div class="contact">
         <div class="contact__list">
             <div class="contact__search">
-                <label for="search" class="search__group">
-                    <input type="text" class="search__control" id="search" placeholder="Search"/>
-                    <button class="search__btn"><i class="fas fa-search"></i></button>
-                </label>
+                <form>
+                    <label for="search" class="search__group">
+                        <input type="text" class="search__control" id="search" placeholder="Search" title="Search by name, phone, email or note"/>
+                        <button class="search__btn" type="submit"><i class="fas fa-search"></i></button>
+                    </label>
+                </form>
             </div>
             <div class="wrapper">
-                <div class="contact__item">
+                <div class="contact__item" data-key="0">
                     <img src="./images/no-user.png" alt="">
                     <div class="contact__info">
                         <h3 class="contact_name">Aya Habeeb</h3>
@@ -116,6 +118,13 @@
     </div>
 </main>
 
+<footer>
+    <p>
+        Coded by
+        <a href="https://github.com/ayahabeeb98"> Aya Habeeb </a>. Inspired by
+        <a href="https://github.com/TutulDevs">Tutul</a>.
+    </p>
+</footer>
 
 <script src="./js/main.js"></script>
 </body>
