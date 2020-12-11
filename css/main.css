@@ -470,6 +470,7 @@ body.dark--mode {
     background-color: rgba(101,101,101,.44);
 
 }
+
 @media (max-width: 868px) {
     .contact {
         grid-template-columns: 1fr;
