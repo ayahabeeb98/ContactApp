@@ -18,15 +18,6 @@ window.onclick = function (event) {
     }
 };
 
-
-//TODO
-//Add contact script
-//1-
-//2- create co Validate Formntact__item
-//3- open contact__details
-//4- search contact feature
-//5- delete contact feature
-
 //upload and preview avatar
 let avatarFile = document.querySelector('.form-file');
 const thump = document.querySelector('.avatar__thump');
@@ -95,6 +86,7 @@ const contact = [
         newSrc: noUserThump
     }
 ];
+
 let k = 1;
 
 createContactBtn.addEventListener('click', (e) => {
@@ -120,8 +112,12 @@ function clearFields() {
     newSrc = noUserThump;
 }
 
+let contactDetails = document.querySelector('.contact_details');
+const closeContactMobile = document.querySelector('.contact_details .details__close');
 
 //Display specific contact
+let screenWidth = document.body.clientWidth;
+
 wrapper.addEventListener('click', e => {
     let singleContact = e.target;
     if (singleContact.dataset.id) {
@@ -132,7 +128,10 @@ wrapper.addEventListener('click', e => {
         let contactKey = singleContact.dataset.key;
         if (contactKey) {
             let user = contact.filter(item => item.key === Number(contactKey));
-            showDetails(user[0])
+            showDetails(user[0]);
+            if(screenWidth <= 556){
+                contactDetails.classList.add('mobile-version');
+            }
         } else {
             console.log('something went wrong')
         }
@@ -163,6 +162,9 @@ closeContact.addEventListener('click', () => {
     detailsWrapper.style.display = "none";
     no_user.style.display = "block";
     userImage.src = noUserThump;
+    if (screenWidth <= 556){
+        contactDetails.classList.remove('mobile-version');
+    }
 });
 
 

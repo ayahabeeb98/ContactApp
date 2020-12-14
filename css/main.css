@@ -471,6 +471,29 @@ body.dark--mode {
 
 }
 
+@keyframes slideIn {
+    0% {
+        left: 70%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        left: 0;
+        opacity: 1;
+    }
+
+    100% {
+        left: 70%;
+        opacity: 0;
+    }
+}
 @media (max-width: 868px) {
     .contact {
         grid-template-columns: 1fr;
@@ -478,6 +501,23 @@ body.dark--mode {
 }
 
 @media (max-width: 556px) {
+    .contact {
+        position: relative;
+    }
+
+    .contact_details {
+        display: none;
+    }
+    .contact_details.mobile-version {
+        display: block;
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        perspective: 100px;
+        animation: slideIn 800ms ease-in;
+    }
+
     .contact_details img,
     .avatar__thump{
         width: 180px;
@@ -495,4 +535,6 @@ body.dark--mode {
     .form-container {
         width: 85%;
     }
+
+
 }
